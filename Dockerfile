@@ -40,7 +40,7 @@ COPY data/setting.toml ./data/setting.toml
 COPY main.py .
 
 # 创建默认的 token.json 文件
-RUN echo '{"ssoNormal": {}, "ssoSuper": {}}' > /app/data/token.json
+RUN echo '{"ssoNormal": {eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaW9uX2lkIjoiZGM3MjI3YmYtNjFjZi00OTk1LWI0ZTctOTFiODRlZWUzYzA0In0.fJm9A-bKscHWC4iHCouwLplmubHtJ-7_ggUWSaDRjX}, "ssoSuper": {eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaW9uX2lkIjoiZGM3MjI3YmYtNjFjZi00OTk1LWI0ZTctOTFiODRlZWUzYzA0In0.fJm9A-bKscHWC4iHCouwLplmubHtJ-7_ggUWSaDRjX}}' > /app/data/token.json
 
 # 删除 Python 字节码和缓存
 ENV PYTHONDONTWRITEBYTECODE=1 \
